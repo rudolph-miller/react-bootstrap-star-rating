@@ -63,7 +63,6 @@ export default class StarRating extends Component {
   }
 
   componentDidMount() {
-    const $node = $(this._node)
     const options = Seq(pluginOptionPropTypes).map((_, key) => {
       return this.props[key];
     }).filter(value => {
@@ -71,10 +70,10 @@ export default class StarRating extends Component {
         return true;
       return false;
     }).toJS();
-    $node.rating(options);
+    this.$node.rating(options);
     Seq(pluginEvents).forEach((key, name) => {
       if (this.props[key])
-        $node.on(name, this.props[key]);
+        this.$node.on(name, this.props[key]);
       return true;
     });
   }
@@ -82,7 +81,7 @@ export default class StarRating extends Component {
   componentWillUnmount() {
     Seq(pluginEvents).forEach((key, name) => {
       if (this.props[key])
-        $node.off(name, this.props[key]);
+        this.$node.off(name, this.props[key]);
       return true;
     });
   }
@@ -90,8 +89,34 @@ export default class StarRating extends Component {
   render() {
     return (
       <input
-        ref={node => { this._node = node; }}
+        ref={node => { this.$node = $(node); }}
         defaultValue={this.props.defaultValue} />
     );
+  }
+
+  /* http://plugins.krajee.com/star-rating#methods */
+
+  update(value) {
+    this.$node.rating('update', value);
+  }
+
+  refresh(options) {
+    this.$node.rating('refresh', options);
+  }
+
+  reset() {
+    this.$node.rating('reset');
+  }
+
+  clear() {
+    this.$node.rating('clear');
+  }
+
+  destroy() {
+    this.$node.rating('destroy');
+  }
+
+  create() {
+    this.$node.rating('create');
   }
 }
