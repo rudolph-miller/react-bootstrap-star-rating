@@ -46,7 +46,7 @@ render(<App />, document.getElementById('app'));
 
 # Image
 
-![](http://g.recordit.co/4LXXLC78RQ.gif)
+![](/images/image.gif)
 
 # Props
 
