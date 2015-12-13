@@ -2,10 +2,10 @@
   "name": "react-bootstrap-star-rating",
   "version": "0.0.1",
   "description": "React wrapper of bootstrap-star-rating",
-  "main": "bundle.js",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "node_modules/.bin/webpack",
-    "watch": "node_modules/.bin/webpack -w",
+    "build": "node_modules/.bin/babel src --out-dir lib",
+    "watch": "node_modules/.bin/babel src --out-dir lib --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,12 +25,13 @@
   },
   "homepage": "https://github.com/Rudolph-Miller/react-bootstrap-star-rating#readme",
   "devDependencies": {
+    "babel": "^5.8.34",
     "babel-core": "^5.8.34",
-    "babel-loader": "^5.4.0",
-    "webpack": "^1.12.9"
+    "babel-loader": "^5.4.0"
   },
   "dependencies": {
+    "bootstrap-star-rating": "git://github.com/kartik-v/bootstrap-star-rating#v3.5.5",
     "react": "^0.14.3",
-    "bootstrap-star-rating": "git://github.com/kartik-v/bootstrap-star-rating#v3.5.5"
+    "react-dom": "^0.14.3"
   }
 }
