@@ -80,6 +80,11 @@ export default class StarRating extends Component {
   }
 
   componentWillUnmount() {
+    Seq(pluginEvents).forEach((key, name) => {
+      if (this.props[key])
+        $node.off(name, this.props[key]);
+      return true;
+    });
   }
 
   render() {
