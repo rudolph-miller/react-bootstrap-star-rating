@@ -63,6 +63,7 @@ export default class StarRating extends Component {
   }
 
   componentDidMount() {
+    const $node = $(this._node)
     const options = Seq(pluginOptionPropTypes).map((_, key) => {
       return this.props[key];
     }).filter(value => {
@@ -70,7 +71,12 @@ export default class StarRating extends Component {
         return true;
       return false;
     }).toJS();
-    $(this._node).rating(options);
+    $node.rating(options);
+    Seq(pluginEvents).forEach((key, name) => {
+      if (this.props[key])
+        $node.on(name, this.props[key]);
+      return true;
+    });
   }
 
   componentWillUnmount() {

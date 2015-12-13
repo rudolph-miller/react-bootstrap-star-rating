@@ -5,7 +5,12 @@ import { render } from 'react-dom';
 class App extends Component {
   render() {
     return (
-      <StarRating defaultValue={5} />
+      <StarRating
+        defaultValue={5}
+        onRatingChange={(_, v) => {
+          console.log(v);
+        }} 
+      />
     );
   }
 }
