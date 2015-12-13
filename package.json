@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "bootstrap-star-rating": "git://github.com/kartik-v/bootstrap-star-rating#v3.5.5",
+    "immutable": "^3.7.5",
     "react": "^0.14.3",
     "react-dom": "^0.14.3"
   }

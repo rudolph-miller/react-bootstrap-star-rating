@@ -1,6 +1,7 @@
 require('bootstrap-star-rating/js/star-rating');
 import $ from 'bootstrap-star-rating/node_modules/jquery';
 import React, { Component, PropTypes } from 'react';
+import { Seq, toJS } from 'immutable';
 
 /* http://plugins.krajee.com/star-rating#options */
 const pluginOptionPropTypes = {
@@ -57,11 +58,17 @@ export default class StarRating extends Component {
   }
 
   componentDidMount() {
-    let options =  {};
-    for ( let key in pluginOptionPropTypes ) {
-      options[key] = this.props[key];
-    }
+    const options = Seq(pluginOptionPropTypes).map((_, key) => {
+      return this.props[key];
+    }).filter(value => {
+      if (typeof value != 'undefined')
+        return true;
+      return false;
+    }).toJS();
     $(this._node).rating(options);
+  }
+
+  componentWillUnmount() {
   }
 
   render() {
