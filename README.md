@@ -12,7 +12,17 @@ npm install --save react-bootstrap-star-rating
 
 # Usage
 
+First of all you must load the following assets in your `<head />`.
+(The last one is [here](https://raw.githubusercontent.com/kartik-v/bootstrap-star-rating/master/css/star-rating.min.css).)
+
+```html
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="path/to/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
 ```
+
+And in your app,
+
+```js
 import React, { Component } from 'react';
 import StarRating from 'react-bootstrap-star-rating';
 import { render } from 'react-dom';
@@ -31,6 +41,8 @@ class App extends Component {
 
 render(<App />, document.getElementById('app'));
 ```
+
+.
 
 # Image
 
@@ -91,7 +103,7 @@ These are [Plugin Methods](http://plugins.krajee.com/star-rating#methods).
 - `destroy`
 - `create`
 
-```
+```js
 class App extends Component {
   componentDidMount() {
     setTimeout(() => {
