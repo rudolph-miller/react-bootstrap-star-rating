@@ -1,5 +1,7 @@
 # React Bootstrap Star Rating
 
+[![npm version](https://badge.fury.io/js/react-bootstrap-star-rating.svg)](https://badge.fury.io/js/react-bootstrap-star-rating)
+
 React wrapper of [bootstrap-star-rating](https://github.com/kartik-v/bootstrap-star-rating).
 
 # Install

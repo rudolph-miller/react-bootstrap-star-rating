@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StarRating from '../../react-bootstrap-star-rating';
+import StarRating from 'react-bootstrap-star-rating';
 import { render } from 'react-dom';
 
 class App extends Component {
