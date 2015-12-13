@@ -51,9 +51,14 @@ const pluginEvents = {
   'rating.hoverleave': 'onRatingHoverleave'
 }
 
+const pluginEventPropTypes = Seq(pluginEvents).map((_) => {
+  return PropTypes.func;
+}).toJS();
+
 export default class StarRating extends Component {
   static propTypes = {
     ...pluginOptionPropTypes,
+    ...pluginEventPropTypes,
     defaultValue: PropTypes.number
   }
 
