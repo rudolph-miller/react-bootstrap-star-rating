@@ -9,6 +9,7 @@
   "author": "Rudolph-Miller",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "react-bootstrap-star-rating": "git://github.com/Rudolph-Miller/react-bootstrap-star-rating",
     "react": "^0.14.3",
     "react-dom": "^0.14.3"
   }
