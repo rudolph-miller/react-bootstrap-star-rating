@@ -4,11 +4,13 @@
 
 React wrapper of [bootstrap-star-rating](https://github.com/kartik-v/bootstrap-star-rating).
 
+
 # Install
 
 ```sh
 npm install --save react-bootstrap-star-rating
 ```
+
 
 # Usage
 
@@ -44,9 +46,11 @@ render(<App />, document.getElementById('app'));
 
 .
 
+
 # Image
 
 ![](/images/image.gif)
+
 
 # Props
 
@@ -92,6 +96,7 @@ Options below are [Plugin Events](http://plugins.krajee.com/star-rating#events).
 - `onRatingHover`: `PropTypes.func`
 - `onRatingHoverleave`: `PropTypes.func`
 
+
 # Additional API
 
 These are [Plugin Methods](http://plugins.krajee.com/star-rating#methods).
@@ -119,6 +124,7 @@ class App extends Component {
   }
 }
 ```
+
 
 # See Also
 
