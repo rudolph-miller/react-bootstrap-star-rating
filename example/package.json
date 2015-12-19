@@ -10,7 +10,10 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "react": "^0.14.3",
-    "react-bootstrap-star-rating": "0.0.2",
+    "react-bootstrap-star-rating": "file:///Users/rudolph/js/react-bootstrap-star-rating",
     "react-dom": "^0.14.3"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.0"
   }
 }

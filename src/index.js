@@ -1,5 +1,5 @@
 require('bootstrap-star-rating/js/star-rating');
-import $ from 'bootstrap-star-rating/node_modules/jquery';
+import $ from 'jquery';
 import React, { Component, PropTypes } from 'react';
 import { Seq, toJS } from 'immutable';
 
